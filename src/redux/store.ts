@@ -8,7 +8,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware({
       serializableCheck: {
-        ignoredActionPaths: ['my.action'],
+        ignoredActionPaths: ['meta.arg', 'meta.baseQueryMeta', 'my.action'],
       },
     }).concat(apiSlice.middleware)
   },
